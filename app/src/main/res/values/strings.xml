@@ -8,5 +8,15 @@
     <string name="salir">Salir</string>
     <string name="empresa">Empresa</string>
     <string name="cliente">Cliente</string>
+    <string name="crearCuenta">Crear Cuenta</string>
+    <string name="formularioEmpresa">Ingresa los datos de la empresa</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="direccion">Direccion</string>
+    <string name="telefono">Telefono</string>
+    <string name="email">Email</string>
+    <string name="valor">Valor</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="formulario">Ingresa tus datos</string>
 
 </resources>

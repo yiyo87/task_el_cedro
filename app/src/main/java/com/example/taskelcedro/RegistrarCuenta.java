@@ -1,12 +1,15 @@
 package com.example.taskelcedro;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
 
 public class RegistrarCuenta extends AppCompatActivity {
 
@@ -20,5 +23,14 @@ public class RegistrarCuenta extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
+    }public void registrarEmpresa(View v){
+        Intent i = new Intent(this, formularioEmpresa.class);
+        startActivity(i);
+    }public void salirPrincipal(View v){
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);}
+    public void registrarCliente(View v){
+        Intent i = new Intent(this, formularioCliente.class);
+        startActivity(i);}
 }
+

@@ -43,4 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void crearCuenta(View v){
+            Intent i = new Intent(this, RegistrarCuenta.class);
+            startActivity(i);
+    }
 }
