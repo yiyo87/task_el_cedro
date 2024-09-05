@@ -13,6 +13,12 @@
         android:theme="@style/Theme.TaskElCedro"
         tools:targetApi="31">
         <activity
+            android:name=".RegistrarCuenta"
+            android:exported="false" />
+        <activity
+            android:name=".OlvidarCuenta"
+            android:exported="false" />
+        <activity
             android:name=".principal1"
             android:exported="false" />
         <activity

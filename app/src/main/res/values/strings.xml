@@ -4,4 +4,9 @@
     <string name="usuario">Usuario</string>
     <string name="contrasena">Contraseña</string>
     <string name="btn_ingresar">Ingresar</string>
+    <string name="Registro">Registro</string>
+    <string name="salir">Salir</string>
+    <string name="empresa">Empresa</string>
+    <string name="cliente">Cliente</string>
+
 </resources>
