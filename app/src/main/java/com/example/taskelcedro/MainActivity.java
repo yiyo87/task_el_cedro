@@ -1,8 +1,11 @@
 package com.example.taskelcedro;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -29,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public void login (View v){
         EditText campo1 =this. findViewById(R.id.id_usuario);
         String usuario= campo1.getText().toString();
-        EditText campo2 =this.findViewById(R.id.contrasenia);
+        EditText campo2 =this.findViewById(R.id.contrasena);
         String contrasenia = campo2.getText().toString();
 
         if(usuario.equals("u1") && contrasenia.equals("123")){
@@ -48,4 +51,5 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(this, RegistrarCuenta.class);
             startActivity(i);
     }
+
 }

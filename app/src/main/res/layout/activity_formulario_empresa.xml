@@ -5,15 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="60dp"
     android:orientation="vertical"
     tools:context=".formularioEmpresa">
 
     <TextView
         android:id="@+id/formulario"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
         android:text="@string/formularioEmpresa" />
 
@@ -21,7 +21,6 @@
         android:id="@+id/campoNombreCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="@string/nombre"
         android:inputType="text" />
@@ -62,13 +61,30 @@
         android:hint="@string/valor"
         android:inputType="number" />
 
+    <EditText
+        android:id="@+id/campoUsuarioCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/usuario"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/campoContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/contrasena"
+        android:inputType="text" />
+
     <Button
         android:id="@+id/ingresarbtn"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:hint="@string/Registro"
         android:onClick="camposFormularioEmpresa"
@@ -76,11 +92,11 @@
 
     <Button
         android:id="@+id/salirbtn"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
         android:hint="@string/salir"
         android:onClick="paginaPrincipal"

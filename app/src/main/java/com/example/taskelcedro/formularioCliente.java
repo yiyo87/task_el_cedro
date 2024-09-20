@@ -40,14 +40,19 @@ public class formularioCliente extends AppCompatActivity {
         String email = campo4.getText().toString().trim();
         EditText campo5 = findViewById(R.id.campoTelefono);
         String telefono = campo5.getText().toString().trim();
+        EditText campo6 = findViewById(R.id.campoUsuarioCL);
+        String usuario = campo6.getText().toString().trim();
+        EditText campo7 = findViewById(R.id.campoContrasenaCL);
+        String contrasena = campo7.getText().toString().trim();
+
         // si los campos no estan llenos sale este mensaje
-        if (nombre.isEmpty() || apellido.isEmpty() || direccion.isEmpty() || email.isEmpty() || telefono.isEmpty()) {
+        if (nombre.isEmpty() || apellido.isEmpty() || direccion.isEmpty() || email.isEmpty() || telefono.isEmpty() || usuario.isEmpty() || contrasena.isEmpty()) {
             Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
         } else {
             // si los campos fueron rellenados sale el mensaje
             Toast.makeText(this, "Los datos han sido ingresados con éxito", Toast.LENGTH_SHORT).show();
 
             // Opcionalmente puedes imprimir los valores en la consola
-            System.out.println("Datos ingresados: " + nombre + " " + apellido + " " + direccion + " " + email + " " + telefono);
+            System.out.println("Datos ingresados: " + nombre + " " + apellido + " " + direccion + " " + email + " " + telefono + " " + usuario + " " + contrasena);
         }
     }}

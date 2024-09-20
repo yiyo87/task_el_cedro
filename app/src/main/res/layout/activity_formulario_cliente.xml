@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
     android:orientation="vertical"
     tools:context=".formularioCliente">
 
@@ -20,7 +21,7 @@
             android:id="@+id/formulario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="@string/formulario" />
 
@@ -65,17 +66,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:ems="10"
             android:hint="@string/telefono"
             android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/campoUsuarioCL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="@string/usuario"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/campoContrasenaCL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/contrasena"
+            android:inputType="text" />
 
         <Button
             android:id="@+id/ingresarbtn"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:hint="@string/Registro"
             android:onClick="camposFormularioCliente"
@@ -146,6 +164,14 @@
         android:ems="10"
         android:hint="@string/valor"
         android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
 
     <Button
         android:id="@+id/ingresarbtn2"

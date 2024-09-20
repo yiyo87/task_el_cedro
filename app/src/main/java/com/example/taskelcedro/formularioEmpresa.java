@@ -27,7 +27,7 @@ public class formularioEmpresa extends AppCompatActivity {
     }public void paginaPrincipal(View v){
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
-    }public void camposFormularioEmpresa(View v) {
+    }public void camposFormularioEmpresa(View v) {//los aqui se recuperan los datos ingresados
         EditText campo1 = findViewById(R.id.campoNombreCliente);
         String nombre = campo1.getText().toString().trim();  // .trim() elimina espacios en blanco al inicio y final
         EditText campo2 = findViewById(R.id.campoDireccion);
@@ -38,16 +38,20 @@ public class formularioEmpresa extends AppCompatActivity {
         String telefono = campo4.getText().toString().trim();
         EditText campo5 = findViewById(R.id.campoValor);
         String valor = campo5.getText().toString().trim();
+        EditText campo6 = findViewById(R.id.campoUsuarioCL);
+        String usuario = campo6.getText().toString().trim();
+        EditText campo7 = findViewById(R.id.campoContrasena);
+        String contrasena = campo7.getText().toString().trim();
 
         // si los campos no estan llenos sale este mensaje
-        if (nombre.isEmpty() || direccion.isEmpty() || email.isEmpty() || telefono.isEmpty() || valor.isEmpty()) {
+        if (nombre.isEmpty() || direccion.isEmpty() || email.isEmpty() || telefono.isEmpty() || valor.isEmpty() || usuario.isEmpty() || contrasena.isEmpty()) {
             Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
         } else {
             // si los campos fueron rellenados sale el mensaje
             Toast.makeText(this, "Los datos han sido ingresados con éxito", Toast.LENGTH_SHORT).show();
 
             // Opcionalmente puedes imprimir los valores en la consola
-            System.out.println("Datos ingresados: " + nombre + " " + direccion + " " + email + " " + telefono + " " + valor);
+            System.out.println("Datos ingresados: " + nombre + " " + direccion + " " + email + " " + telefono + " " + valor + " " + usuario + " " + contrasena);
         }
     }
 }

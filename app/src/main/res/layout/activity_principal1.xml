@@ -7,13 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".principal1">
 
-    <TextView
-        android:id="@+id/textView2"
+    <!-- Toolbar -->
+
+    <!-- BottomBar -->
+    <include
+        layout="@layout/toolbar1"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/bottom_bar_include"
+        layout="@layout/bottombar"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:text="Prueba"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/contenedor"
+        android:layout_width="412dp"
+        android:layout_height="583dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="72dp">
+
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
