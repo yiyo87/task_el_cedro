@@ -26,6 +26,9 @@
     <string name="informacion">Informacion</string>
     <string name="botonbarop2">OP2</string>
     <string name="botonbarop3">OP3</string>
+    <string name="Task_el_Cedro">Task El Cedro</string>
+    <string name="abrir">abrir</string>
+    <string name="cerrar">cerrar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
