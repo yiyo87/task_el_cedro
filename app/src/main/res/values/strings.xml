@@ -31,5 +31,10 @@
     <string name="cerrar">cerrar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="ver_pedidos">Ver pedidos</string>
+    <string name="filtrar">Filtrar</string>
+    <string name="task">Task</string>
 
 </resources>

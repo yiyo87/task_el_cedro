@@ -1,5 +1,6 @@
 package com.example.taskelcedro;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -44,11 +45,13 @@ public class principal1 extends AppCompatActivity {
                 int posicion = tab.getPosition();
 
                 switch (posicion){
+
+                    //hacemos que se muestre el framgmento dentro de contenedor
                     case 0:
                         //llamar al fragmento informacion
                         fragmentoInformacion f =new fragmentoInformacion();
-                        //hacemos que se muestre el framgmento dentro de contenedor
                         getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,f).commit();
+
                         break;
 
                         case 1:
@@ -88,6 +91,9 @@ public class principal1 extends AppCompatActivity {
                 int id = item.getItemId();// recuperar el id de la opcion seleccionada
                 if (id == R.id.salir ){
                     Toast.makeText(getApplicationContext(),"salir",Toast.LENGTH_SHORT).show();
+                    //aqui al apretar sali lo que hice fue que me mandara al fragmento de filtro
+                    op3 op3 = new op3();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,op3).commit();
                 }else if (id==R.id.buscar){
                     Toast.makeText(getApplicationContext(),"buscar",Toast.LENGTH_SHORT).show();
                     op2 op2 = new op2();
@@ -96,6 +102,10 @@ public class principal1 extends AppCompatActivity {
 
                 return false;
             }
+            //queria implementar que al apretar el boton salir me mandara a la pagina de login
+            public void salirPrincipal(View v){
+                Intent i = new Intent(principal1.this, MainActivity.class);
+                startActivity(i);}
         });
         DrawerLayout dl= (DrawerLayout) findViewById(R.id.principal);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//hace que genere un boton para desplegar el menu

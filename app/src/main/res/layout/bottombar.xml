@@ -9,24 +9,25 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/informacion"
+            android:id="@+id/verpedidos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/tabop1"
-            android:text="@string/informacion" />
+            android:text="@string/ver_pedidos" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/op2"
+            android:id="@+id/task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/water_droplets_7781861"
+            android:text="@string/task" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/filtrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_search_black_24dp"
-            android:text="@string/botonbarop2" />
+            android:text="@string/filtrar" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/op3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/baseline_delete_24"
-            android:text="@string/botonbarop3" />
     </com.google.android.material.tabs.TabLayout>
 </LinearLayout>

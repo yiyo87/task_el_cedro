@@ -1,5 +1,11 @@
+import io.grpc.InternalChannelz.id
+import org.gradle.internal.impldep.junit.runner.Version.id
+import shadow.bundletool.com.android.tools.r8.internal.id
+
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services")
+
 }
 
 android {
@@ -40,4 +46,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    // Import the Firebase BoM
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+
 }
+
