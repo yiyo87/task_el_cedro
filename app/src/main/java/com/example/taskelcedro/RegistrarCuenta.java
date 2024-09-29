@@ -26,9 +26,12 @@ public class RegistrarCuenta extends AppCompatActivity {
     }public void registrarEmpresa(View v){
         Intent i = new Intent(this, formularioEmpresa.class);
         startActivity(i);
-    }public void salirPrincipal(View v){
+    }
+
+    public void salirPrincipal(View v) {
         Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);}
+        startActivity(i);
+    }
     public void registrarCliente(View v){
         Intent i = new Intent(this, formularioCliente.class);
         startActivity(i);}

@@ -45,17 +45,18 @@
                         android:src="@drawable/naturandes" />
 
                     <Button
+                        android:id="@+id/btnVerInfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Acción 1" />
+                        android:text="Ver Informacion" />
 
                     <Button
                         android:id="@+id/button2"
-                        android:layout_width="104dp"
+                        android:layout_width="151dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:text="Button" />
+                        android:text="Hacer Pedido" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -92,14 +93,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Acción 2" />
+                        android:text="Ver Informacion" />
 
                     <Button
                         android:id="@+id/button3"
-                        android:layout_width="104dp"
+                        android:layout_width="151dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Button" />
+                        android:text="Hacer Pedido" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -134,16 +135,16 @@
 
                     <Button
                         android:id="@+id/button8"
-                        android:layout_width="103dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Button" />
-
-                    <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Acción 3" />
+                        android:text="Ver Informacion" />
+
+                    <Button
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Hacer Pedido" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -180,14 +181,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Acción 4" />
+                        android:text="Ver Informacion" />
 
                     <Button
                         android:id="@+id/button9"
-                        android:layout_width="104dp"
+                        android:layout_width="151dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Button" />
+                        android:text="Hacer Pedido" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
