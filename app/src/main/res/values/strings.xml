@@ -31,13 +31,5 @@
     <string name="cerrar">cerrar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="agua_el_cedro">Agua Purifica El Cedro</string>
-    <string name="ver_informacion">Ver Informacion</string>
-    <string name="hacer_pedido">Hacer Pedido</string>
-    <string name="agua_andes">Agua Purificada NaturAndes</string>
-    <string name="agua_atacama">Agua Purificada Atacama</string>
-    <string name="entre_lagos">Entre Lagos</string>
-    <string name="kaukari">Agua Purificada Kaukari</string>
-
 
 </resources>

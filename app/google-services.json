@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "650585148433",
+    "project_id": "fir-iot-48cb9",
+    "storage_bucket": "fir-iot-48cb9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650585148433:android:dab967beeb46712ed435b0",
+        "android_client_info": {
+          "package_name": "com.example.taskelcedro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVPgEv0qC9z_ogJLTv6ve7HDDTmrXP97g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

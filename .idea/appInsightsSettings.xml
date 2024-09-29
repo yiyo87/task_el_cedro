@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.taskelcedro" />
+                  <option name="mobileSdkAppId" value="1:650585148433:android:dab967beeb46712ed435b0" />
+                  <option name="projectId" value="fir-iot-48cb9" />
+                  <option name="projectNumber" value="650585148433" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
