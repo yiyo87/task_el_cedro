@@ -31,5 +31,9 @@
     <string name="cerrar">cerrar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="naturandes">Agua Purifica NaturAndes</string>
+    <string name="entrelagos">Agua Purifica Entrelagos</string>
+    <string name="kaukari">Agua Purifica Kaukari</string>
+    <string name="elcedro">Agua Purifica El Cedro</string>
 
 </resources>

@@ -12,22 +12,19 @@
             android:id="@+id/verpedidos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/tabop1"
-            android:text="@string/ver_pedidos" />
+            android:icon="@drawable/tabop1" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/task"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/water_droplets_7781861"
-            android:text="@string/task" />
+            android:icon="@drawable/water_droplets_7781861" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/filtrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_search_black_24dp"
-            android:text="@string/filtrar" />
+            android:icon="@drawable/ic_search_black_24dp" />
 
     </com.google.android.material.tabs.TabLayout>
 </LinearLayout>
