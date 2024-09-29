@@ -40,4 +40,13 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
 }
+
+buildscript {
+    dependencies {
+        classpath ("com.android.tools.build:gradle:8.5.2")
+    }
+}
+
+
