@@ -34,7 +34,7 @@
             android:ems="10"
             android:inputType="text"
             android:padding="10dp"
-            android:text="Agua Purificada NaturAndes" />
+            android:text="Agua Purificada Kaukari" />
 
         <TextView
             android:id="@+id/textView9"
@@ -82,7 +82,7 @@
             android:ems="10"
             android:inputType="text"
             android:padding="10dp"
-            android:text="naturandes@gmail.com" />
+            android:text="aguakaukari@gmail.com" />
 
         <TextView
             android:id="@+id/textView15"
@@ -98,7 +98,7 @@
             android:ems="10"
             android:inputType="text"
             android:padding="10dp"
-            android:text="$1.800" />
+            android:text="$1.900" />
 
     </LinearLayout>
 </FrameLayout>

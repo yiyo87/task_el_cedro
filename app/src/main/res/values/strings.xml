@@ -35,5 +35,7 @@
     <string name="entrelagos">Agua Purifica Entrelagos</string>
     <string name="kaukari">Agua Purifica Kaukari</string>
     <string name="elcedro">Agua Purifica El Cedro</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="enviar_solicitud">Enviar Solicitud</string>
 
 </resources>

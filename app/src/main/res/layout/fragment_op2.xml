@@ -52,7 +52,7 @@
                         android:text="Ver Informacion" />
 
                     <Button
-                        android:id="@+id/button2"
+                        android:id="@+id/btnpedido1"
                         android:layout_width="151dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
@@ -90,13 +90,14 @@
                         android:src="@drawable/kaukari" />
 
                     <Button
+                        android:id="@+id/btninfokaukari"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Ver Informacion" />
 
                     <Button
-                        android:id="@+id/button3"
+                        android:id="@+id/btnpedido2"
                         android:layout_width="151dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -134,13 +135,14 @@
                         android:src="@drawable/entrelagos" />
 
                     <Button
-                        android:id="@+id/button8"
+                        android:id="@+id/btnentrelagos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Ver Informacion" />
 
                     <Button
+                        android:id="@+id/btnpedido3"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -178,13 +180,14 @@
                         android:src="@drawable/logo" />
 
                     <Button
+                        android:id="@+id/btnelcedro"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Ver Informacion" />
 
                     <Button
-                        android:id="@+id/button9"
+                        android:id="@+id/btnpedido4"
                         android:layout_width="151dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
