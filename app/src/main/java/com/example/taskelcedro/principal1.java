@@ -1,5 +1,7 @@
 package com.example.taskelcedro;
 
+import static androidx.core.app.PendingIntentCompat.getActivity;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -48,7 +50,7 @@ public class principal1 extends AppCompatActivity {
 
                 switch (posicion) {
                     case 0:
-                        fragmentoInformacion f = new fragmentoInformacion();
+                        fragmento_crud_principal f = new fragmento_crud_principal();
                         getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, f).commit();
                         break;
                     case 1:
@@ -70,18 +72,16 @@ public class principal1 extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
-        // Otras configuraciones de tu toolbar, drawer, etc.
+        // Otras configuraciones de tu toolbar, drawer,
         NavigationView nav = (NavigationView) findViewById(R.id.nav);
         nav.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 if (id == R.id.salir) {
-                    op3 op3 = new op3();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, op3).commit();
-                } else if (id == R.id.buscar) {
-                    op2 op2 = new op2();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, op2).commit();
+                    Intent intent = new Intent(getActivity(), MainActivity.class);
+                    startActivity(intent);
+                    getActivity().finish();
                 }
                 return false;
             }
@@ -113,5 +113,9 @@ public class principal1 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    private Activity getActivity() {
+        return null;
     }
 }

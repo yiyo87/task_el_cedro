@@ -37,5 +37,8 @@
     <string name="elcedro">Agua Purifica El Cedro</string>
     <string name="cantidad">Cantidad</string>
     <string name="enviar_solicitud">Enviar Solicitud</string>
+    <string name="opciones">Elige una opcion</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="eliminar">Eliminar</string>
 
 </resources>
