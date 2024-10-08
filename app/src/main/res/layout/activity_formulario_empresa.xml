@@ -21,6 +21,7 @@
         android:id="@+id/campoNombreCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="6dp"
         android:ems="10"
         android:hint="@string/nombre"
         android:inputType="text" />
@@ -29,6 +30,7 @@
         android:id="@+id/campoDireccion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="6dp"
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="@string/direccion"
@@ -38,6 +40,7 @@
         android:id="@+id/campoEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="6dp"
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="@string/email"
@@ -47,6 +50,7 @@
         android:id="@+id/campoTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="6dp"
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="@string/telefono"
@@ -56,6 +60,7 @@
         android:id="@+id/campoValor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="6dp"
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="@string/valor"
@@ -65,8 +70,8 @@
         android:id="@+id/campoUsuarioCL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="6dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="@string/usuario"
         android:inputType="text" />
@@ -75,6 +80,7 @@
         android:id="@+id/campoContrasena"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="6dp"
         android:ems="10"
         android:hint="@string/contrasena"
         android:inputType="text" />
@@ -101,4 +107,11 @@
         android:hint="@string/salir"
         android:onClick="paginaPrincipal"
         android:text="@string/salir" />
+
+    <Button
+        android:id="@+id/btnagregarimg"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/agregar_img" />
 </LinearLayout>
