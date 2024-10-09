@@ -108,4 +108,12 @@
         android:onClick="paginaPrincipal"
         android:text="@string/salir" />
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="cargar_imagen"
+        android:text="Button" />
+
 </LinearLayout>

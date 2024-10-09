@@ -14,15 +14,22 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 
 public class formularioEmpresa extends AppCompatActivity {
+    static final int GALLERY_INTENT = 1;
+    private StorageReference mStorage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_formulario_empresa);
+        mStorage = FirebaseStorage.getInstance().getReference();
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.principal), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -35,7 +42,29 @@ public class formularioEmpresa extends AppCompatActivity {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }
+    public void cargar_imagen(View v){
+        Permisos permiso = new Permisos(getApplicationContext());
+        if (permiso.checkPermissionREAD_EXTERNAL_STORAGE(this)) {
+            Intent openPictureIntent = new Intent(Intent.ACTION_PICK);
+            openPictureIntent.setType("image/*");
+            startActivityForResult(openPictureIntent,GALLERY_INTENT);
+        }
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == GALLERY_INTENT && resultCode == RESULT_OK) {
+            Uri uri = data.getData();
+            StorageReference filePath = mStorage.child("fotos").child(uri.getLastPathSegment());
+            filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    Toast.makeText(getApplicationContext(), "Imagen cargada", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
     public void camposFormularioEmpresa(View v) {
         EditText campo1 = findViewById(R.id.campoNombreCliente);
         String nombre = campo1.getText().toString().trim();
