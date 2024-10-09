@@ -108,10 +108,4 @@
         android:onClick="paginaPrincipal"
         android:text="@string/salir" />
 
-    <Button
-        android:id="@+id/btnagregarimg"
-        android:layout_width="102dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/agregar_img" />
 </LinearLayout>

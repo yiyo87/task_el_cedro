@@ -23,7 +23,8 @@ public class RegistrarCuenta extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }public void registrarEmpresa(View v){
+    }
+    public void registrarEmpresa(View v){
         Intent i = new Intent(this, formularioEmpresa.class);
         startActivity(i);
     }

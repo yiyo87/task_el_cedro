@@ -12,9 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TaskElCedro"
         tools:targetApi="31">
-        <activity
-            android:name=".mainprincipal"
-            android:exported="false" />
+
         <activity
             android:name=".formularioCliente"
             android:exported="false" />
