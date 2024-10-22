@@ -40,5 +40,5 @@
     <string name="opciones">Elige una opcion</string>
     <string name="actualizar">Actualizar</string>
     <string name="eliminar">Eliminar</string>
-
+    <string name="btnsubirimagen">Subir Logo</string>
 </resources>

@@ -42,20 +42,16 @@ public class Permisos extends AppCompatActivity {
         }
     }
 
-    public void showDialog(final String msg, final Context context,
-                           final String permission) {
-        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(context);
+    public void showDialog(final String msg, final Activity activity, final String permission) {
+        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(activity);
         alertBuilder.setCancelable(true);
         alertBuilder.setTitle("Permiso necesario");
         alertBuilder.setMessage(msg + " se necesita permiso");
-        alertBuilder.setPositiveButton(android.R.string.yes,
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        ActivityCompat.requestPermissions((Activity) context,
-                                new String[]{permission},
-                                MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
-                    }
-                });
+        alertBuilder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                ActivityCompat.requestPermissions(activity, new String[]{permission}, MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+            }
+        });
         AlertDialog alert = alertBuilder.create();
         alert.show();
     }
