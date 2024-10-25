@@ -1,58 +1,103 @@
 package com.example.taskelcedro;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-
-import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class formularioCliente extends AppCompatActivity {
+    private FirebaseFirestore db;
+    private Button ingresarbtn;
+    private EditText campo1, campo2, campo3, campo4, campo5, campo6, campo7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_formulario_cliente);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.principal), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        // Inicializar Firestore
+        db = FirebaseFirestore.getInstance();
+
+        // Inicializar los campos y el botón
+        campo1 = findViewById(R.id.campoNombreCliente);
+        campo2 = findViewById(R.id.campoApellido);
+        campo3 = findViewById(R.id.campoDireccion);
+        campo4 = findViewById(R.id.campoEmail);
+        campo5 = findViewById(R.id.campoTelefono);
+        campo6 = findViewById(R.id.campoUsuarioCL);
+        campo7 = findViewById(R.id.campoContrasenaCL);
+        ingresarbtn = findViewById(R.id.ingresarbtn);
+
+        // Configurar listener para el botón
+        ingresarbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Capturar los datos de los campos
+                String nombre = campo1.getText().toString().trim();
+                String apellido = campo2.getText().toString().trim();
+                String direccion = campo3.getText().toString().trim();
+                String email = campo4.getText().toString().trim();
+                String telefono = campo5.getText().toString().trim();
+                String usuario = campo6.getText().toString().trim();
+                String contrasena = campo7.getText().toString().trim();
+
+                // Validar que los campos no estén vacíos
+                if (nombre.isEmpty() || apellido.isEmpty() || direccion.isEmpty() || email.isEmpty() || telefono.isEmpty() || usuario.isEmpty() || contrasena.isEmpty()) {
+                    Toast.makeText(formularioCliente.this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Llamar a la función para guardar los datos en Firestore
+                    guardarDatosEnFirestore(nombre, apellido, direccion, email, telefono, usuario, contrasena);
+                }
+            }
         });
-    }public void paginaPrincipal(View v){
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
-    }public void camposFormularioCliente(View v) {
-        EditText campo1 = findViewById(R.id.campoNombreCliente);
-        String nombre = campo1.getText().toString().trim();  // .trim() elimina espacios en blanco al inicio y final
-        EditText campo2 = findViewById(R.id.campoApellido);
-        String apellido = campo2.getText().toString().trim();
-        EditText campo3 = findViewById(R.id.campoDireccion);
-        String direccion = campo3.getText().toString().trim();
-        EditText campo4 = findViewById(R.id.campoEmail);
-        String email = campo4.getText().toString().trim();
-        EditText campo5 = findViewById(R.id.campoTelefono);
-        String telefono = campo5.getText().toString().trim();
-        EditText campo6 = findViewById(R.id.campoUsuarioCL);
-        String usuario = campo6.getText().toString().trim();
-        EditText campo7 = findViewById(R.id.campoContrasenaCL);
-        String contrasena = campo7.getText().toString().trim();
+    }
 
-        // si los campos no estan llenos sale este mensaje
-        if (nombre.isEmpty() || apellido.isEmpty() || direccion.isEmpty() || email.isEmpty() || telefono.isEmpty() || usuario.isEmpty() || contrasena.isEmpty()) {
-            Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
-        } else {
-            // si los campos fueron rellenados sale el mensaje
-            Toast.makeText(this, "Los datos han sido ingresados con éxito", Toast.LENGTH_SHORT).show();
+    // Función para guardar los datos en Firebase Firestore
+    private void guardarDatosEnFirestore(String nombre, String apellido, String direccion, String email, String telefono, String usuario, String contrasena) {
+        // Crear un mapa con los datos del formulario
+        Map<String, Object> cliente = new HashMap<>();
+        cliente.put("nombre", nombre);
+        cliente.put("apellido", apellido);
+        cliente.put("direccion", direccion);
+        cliente.put("email", email);
+        cliente.put("telefono", telefono);
+        cliente.put("usuario", usuario);
+        cliente.put("contrasena", contrasena);
 
-            // Opcionalmente puedes imprimir los valores en la consola
-            System.out.println("Datos ingresados: " + nombre + " " + apellido + " " + direccion + " " + email + " " + telefono + " " + usuario + " " + contrasena);
-        }
-    }}
+        // Guardar los datos en Firestore en la colección "clientes"
+        db.collection("clientes").add(cliente).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+                Toast.makeText(formularioCliente.this, "Datos guardados correctamente", Toast.LENGTH_SHORT).show();
+                // Opcional: cerrar la actividad o limpiar los campos después de guardar
+                limpiarCampos();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(formularioCliente.this, "Error al guardar los datos", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    // Método para limpiar los campos después de guardar los datos
+    private void limpiarCampos() {
+        campo1.setText("");
+        campo2.setText("");
+        campo3.setText("");
+        campo4.setText("");
+        campo5.setText("");
+        campo6.setText("");
+        campo7.setText("");
+    }
+}
