@@ -1,3 +1,5 @@
+import java.util.regex.Pattern.compile
+
 plugins {
     alias(libs.plugins.android.application)
     id("com.google.gms.google-services")
@@ -47,8 +49,9 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-storage:21.0.1")
-
+    implementation ("com.google.firebase:firebase-firestore:25.1.1")
+    implementation ("com.google.android.gms:play-services-auth:19.0.0")
     //firebase firestore
     implementation("com.google.firebase:firebase-core:21.1.1")
-
+    compile ("com.google.firebase:firebase-admin:1.32.0")
 }

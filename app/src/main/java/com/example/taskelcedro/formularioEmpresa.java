@@ -14,6 +14,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -22,12 +23,13 @@ public class formularioEmpresa extends AppCompatActivity {
     static final int GALLERY_INTENT = 1;
     static final int PERMISSION_REQUEST_CODE = 100;
     private StorageReference mStorage;
-
+    private FirebaseFirestore db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_empresa);
         mStorage = FirebaseStorage.getInstance().getReference();
+        db = FirebaseFirestore.getInstance();
     }
 
     public void cargar_imagen(View v) {
