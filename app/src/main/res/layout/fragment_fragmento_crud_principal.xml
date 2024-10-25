@@ -16,27 +16,43 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:hint="@string/opciones"
             android:text="@string/opciones"
             android:textSize="24sp" />
 
-        <Button
-            android:id="@+id/btnactualizar"
-            android:layout_width="wrap_content"
+        <!-- Tabla para mostrar información de la empresa -->
+        <TableLayout
+            android:id="@+id/tablaEmpresa"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="200dp"
-            android:gravity="center"
-            android:text="@string/actualizar" />
+            android:layout_marginTop="20dp"
+            android:stretchColumns="*">
 
-        <Button
-            android:id="@+id/btneliminar"
-            android:layout_width="wrap_content"
+            <!-- Aquí se agregarán filas dinámicamente para cada campo de la empresa -->
+
+        </TableLayout>
+
+        <!-- Botones para actualizar y eliminar -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="@string/eliminar" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnactualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/actualizar" />
+
+            <Button
+                android:id="@+id/btneliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/eliminar" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </FrameLayout>

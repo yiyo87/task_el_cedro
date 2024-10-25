@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "650585148433",
-    "project_id": "fir-iot-48cb9",
-    "storage_bucket": "fir-iot-48cb9.appspot.com"
+    "project_number": "700357124308",
+    "project_id": "app-iot-el-cedro",
+    "storage_bucket": "app-iot-el-cedro.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:650585148433:android:dab967beeb46712ed435b0",
+        "mobilesdk_app_id": "1:700357124308:android:bcccc29198f9932ac19b41",
         "android_client_info": {
           "package_name": "com.example.taskelcedro"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDVPgEv0qC9z_ogJLTv6ve7HDDTmrXP97g"
+          "current_key": "AIzaSyCpBTsimQqJiVEwsdqV-92609hrDzGKPpM"
         }
       ],
       "services": {
